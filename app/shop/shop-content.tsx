@@ -1,0 +1,1 @@
+'use client';import {useSearchParams} from 'next/navigation';import {Catalog} from '@/components/catalog';export function ShopContent(){const params=useSearchParams();const cat=params.get('category')||'All';return <Catalog key={cat} initialCategory={['All','iPhone','Android','Accessories'].includes(cat)?cat:'All'}/>}
